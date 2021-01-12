@@ -1,0 +1,7 @@
+﻿FROM node:9-slim
+WORKDIR /app2
+COPY package-lock*.json ./app2
+RUN npm install
+COPY . ./app2
+CMD["npm","start"]
+EXPOSE 3000
